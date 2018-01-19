@@ -19,18 +19,20 @@ int main()
 	int wordScore = 0;
 
 	// Ask the user to enter a word
-	printf("Please enter a word: ");
+    printf("\n-------------------------------\n");
+	printf("The Scrabble Word Score Counter\n");
+    printf("-------------------------------\n\n");
+    printf("Please enter a word: ");
 
 	//
-	// Task 1 - using a while loop to read a word
+	// Using a while loop to read a word
 	//
 	scanf("%c", &letter);
 
 	while (letter != '\n') {
 
-		// Inside the while loop...
 		//
-		// Task 2 - assigning the letter score depending on the input letter
+		// Assigning the letter score depending on the input letter
 		//
 		switch (letter) {
 		case 'a': letterScore = 1; break;
@@ -60,9 +62,8 @@ int main()
 		case 'z': letterScore = 10; break;
 		}
 
-		// Inside the while loop...
 		//
-		// Task 3: summing the letter score to the word score
+		// summing the letter score to the word score
 		//
 		wordScore += letterScore;
 		scanf("%c", &letter);
@@ -70,10 +71,9 @@ int main()
 	}
 
 	//
-	// Task 3: printing the word score
+	// printing the word score
 	//
-	printf("%d", wordScore);
-
-	// Print a newline at the end of the program
-	printf("\n");
+    printf("\n");
+    printf("  word score: %d", wordScore);
+	printf("\n\n");
 }
